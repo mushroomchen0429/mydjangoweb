@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 
 from .views import hi, r, tag_test
+from practice1 import views
 
 
 urlpatterns = [
@@ -24,4 +25,7 @@ urlpatterns = [
     path('r/<int:start>/<int:stop>/', r),
     path('tag_test/', tag_test),
     path('admin/', admin.site.urls),
+
+    path('post/', views.index, name="posts_index"),
+    path('post/<int:pk>/', views.show, name='posts_show'),
 ]

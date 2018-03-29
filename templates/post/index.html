@@ -1,0 +1,5 @@
+<h1>test</h1>
+
+{% for post in posts %}
+    <a href="{% url 'posts_show' post.id %}">{{ post.id }}</a> | {{ post.title }} | {{ post.content }}<br>
+{% endfor %}
