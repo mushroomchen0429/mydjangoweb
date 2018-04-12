@@ -28,4 +28,6 @@ urlpatterns = [
 
     path('post/', views.index, name="posts_index"),
     path('post/<int:pk>/', views.show, name='posts_show'),
+    path('post/new/', views.new, name='posts_new'),
+    path('post/edit/<int:pk>/', views.edit, name='posts_edit'),
 ]

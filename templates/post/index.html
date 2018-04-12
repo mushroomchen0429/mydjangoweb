@@ -1,4 +1,8 @@
-<h1>test</h1>
+<h1>Post</h1>
+
+<a href="{% url 'posts_new' %}">New Post</a>
+
+<hr>
 
 {% for post in posts %}
     <a href="{% url 'posts_show' post.id %}">{{ post.id }}</a> | {{ post.title }} | {{ post.content }}<br>
